@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #fafaf8;
+    --bg-surface: #ffffff;
+    --border-subtle: #e7e5e4;
+    --border-medium: #d6d3d1;
+    --text-primary: #1c2024;
+    --text-secondary: #525866;
+    --text-muted: #717784;
+    --accent: #1d4ed8;
+    --accent-hover: #1e40af;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Section anchor scroll margin so sticky nav does not hide headings */
+  section {
+    scroll-margin-top: 5.5rem;
+  }
+
+  /* Accessible focus indicators */
+  :focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Print optimizations for clean recruiter printouts */
+@media print {
+  header,
+  nav,
+  button,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  section {
+    page-break-inside: avoid;
+  }
+}

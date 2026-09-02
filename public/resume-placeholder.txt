@@ -1,0 +1,14 @@
+RESUME PLACEMENT INSTRUCTIONS
+========================================
+
+Please place your official resume file here:
+public/Nishant_Kumar_Software_Developer_Resume.pdf
+
+When building with Vite, any file placed in the `public/` directory will be copied directly to the root of the output `dist/` directory during `npm run build`.
+
+The portfolio website links to this file using:
+`${import.meta.env.BASE_URL}Nishant_Kumar_Software_Developer_Resume.pdf`
+
+This ensures that:
+1. When deployed to GitHub Pages at `https://nish1894.github.io/<repo>/`, the file is correctly served at `https://nish1894.github.io/<repo>/Nishant_Kumar_Software_Developer_Resume.pdf`.
+2. Both "View Resume" and "Download Resume" buttons work seamlessly in preview, local development, and production.
